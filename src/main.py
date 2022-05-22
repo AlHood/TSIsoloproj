@@ -1,9 +1,8 @@
-from src.LogIn import LogIn
+from src.player import *
 
 class Main:
     def main():
-        log_in = LogIn()
-        log_in.log_in()
+        #a series of operations for the player class
 
 if __name__ == '__main__':
     Main.main()
