@@ -1,21 +1,14 @@
 from src.player import *
 
-
 class Main:
     def main():
         active_game = True
-        player_name = ""
 
-        #a series of operations for the player class
-
-        #hello
-        #ask the
         print("Hello, welcome to a simple card drawing and matching game.")
-        player_name = input("Please enter your name: ")
 
         while active_game:
             #Initialization of new round
-            player1 = HumanPlayer(player_name)
+            player1 = HumanPlayer()
             player2 = CPUPlayer()
 
             #Players are dealt 3 cards
@@ -46,17 +39,10 @@ class Main:
             else:
                 print("There is no winner.\n")
 
-
-
-
+            #Player input taken to restart the loop
             if input("Please enter q to quit, or any other input to play another round: ") == "q":
                 active_game = False
 
-
-
-        #while loop containing single turn
-
-        pass
 
 
 if __name__ == '__main__':

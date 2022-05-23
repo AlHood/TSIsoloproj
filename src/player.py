@@ -10,8 +10,8 @@ class Player():
 
     def draw_card(self):
         card_color = ["G","R","B","Y"]
-        card_value = ["1","2","3"]
-        new_card = str(card_color[random.randrange(0,4)] + card_value[random.randrange(0,3)])
+        card_value = ["1","2","3","4","5"]
+        new_card = str(card_color[random.randrange(0,4)] + card_value[random.randrange(0,5)])
         self.hand.append(new_card)
 
 
@@ -22,7 +22,7 @@ class Player():
 
     def discard_card(self):
         self.hand.pop()
-        pass
+
 
     def score_hand(self):
         #needs a strategy - return as a score - 100 for pair, 40 for match, sum of integers otherwise
@@ -40,6 +40,11 @@ class Player():
 
 
 class HumanPlayer(Player):
+
+    def __init__(self):
+        self.name = input("Please enter your name: ")
+        self.hand = []
+        self.score = 0
 
     def discard_card(self,discard):
 
