@@ -66,5 +66,5 @@ class CPUPlayer(Player):
 class TestPlayer(Player):
     def __init__(self):
         self.name = "Hamish The Fake"
-        self.hand = ["R4", "G9"]
+        self.hand = ["R4", "R4"]
         self.score = 0
