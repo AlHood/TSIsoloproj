@@ -25,7 +25,6 @@ class Player():
 
 
     def score_hand(self):
-        #needs a strategy - return as a score - 100 for pair, 40 for match, sum of integers otherwise
         score = 0
         if self.hand[0][0] == self.hand[1][0]:
             score += 40
@@ -34,9 +33,6 @@ class Player():
         score += int(self.hand[0][1])
         score += int(self.hand[1][1])
         return score
-
-
-
 
 
 class HumanPlayer(Player):
@@ -55,9 +51,6 @@ class HumanPlayer(Player):
             print("Unable to discard. Likely invalid input.")
 
 
-
-
-
 class CPUPlayer(Player):
     def __init__(self):
         read_csv_file = ReadCSVFile()
@@ -65,7 +58,6 @@ class CPUPlayer(Player):
         self.name = names[0][random.randrange(0,5)]
         self.hand = []
         self.score = 0
-
 
 
 class TestPlayer(Player):
