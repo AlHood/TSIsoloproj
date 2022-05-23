@@ -5,6 +5,8 @@ class Main:
         active_game = True
 
         print("Hello, welcome to a simple card drawing and matching game.")
+        print("The aim is to make matches of card colour, or pairs of card numbers")
+        print("Your score is the total number value of the cards, plus 40 for a colour match \n and 100 for a number pair.")
 
         while active_game:
             #Initialization of new round
